@@ -1,16 +1,25 @@
 {
     "name": "curvesoftware/gridiron-guru-fantasy-data-api",
     "description": "A PHP Client library for Fantasy Data API, originally created by Gridiron Guru",
+    "version": "2.0.0-DEV",
+    "keywords": ["fantasydata", "client", "gridiron"],
     "authors": [
         {
             "name": "Robert Johnson",
-            "email": "robj@gridiron-guru.com"
+            "email": "robj@gridiron-guru.com",
+            "role": "Original Developer"
         },
         {
           "name" : "Mustafa Ashurex",
-          "email": "mustafa@curvesoftware.com"
+          "email": "mustafa@curvesoftware.com",
+          "role": "Developer"
         }
     ],
+    "support": {
+      "email": "mustafa@curvesoftware.com",
+      "source": "https://github.com/mashurex/FantasyDataAPI",
+      "docs": "https://github.com/mashurex/FantasyDataAPI/tree/master/doc"
+    },
     "require": {
         "guzzlehttp/guzzle": "~4",
         "guzzlehttp/command": "~0.4.0",
