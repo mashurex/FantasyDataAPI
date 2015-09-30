@@ -7,13 +7,13 @@
  */
 
 $resources = [];
-$resources['baseUrl'] = 'http://api.nfldata.apiphany.com/{Subscription}/{Format}/';
+$resources['baseUrl'] = 'https://api.fantasydata.net/nfl/v2/{Format}/';
 
 /**
  * Action: Check If Games In Progress
  * Resource: AreAnyGamesInProgress
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/AreAnyGamesInProgress?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/AreAnyGamesInProgress?key=<Your_developer_key>
  */
 $resources['operations']['AreAnyGamesInProgress'] = [
     'httpMethod' => 'GET',
@@ -22,7 +22,7 @@ $resources['operations']['AreAnyGamesInProgress'] = [
     'parameters' => [
         'Subscription' => [ 'type' => 'string', 'location' => 'uri' ],
         'Format' => [ 'type' => 'string', 'location' => 'uri', 'default' => 'xml' ],
-        'key' => [ 'type' => 'string', 'location' => 'query' ]
+        'key' => [ 'type' => 'string', 'location' => 'query' ],
     ]
 ];
 
@@ -30,7 +30,7 @@ $resources['operations']['AreAnyGamesInProgress'] = [
  * Action: Get Teams for Season
  * Resource: Teams
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/Teams/{season}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/Teams/{season}?key=<Your_developer_key>
  */
 $resources['operations']['Teams'] = [
     'httpMethod' => 'GET',
@@ -52,7 +52,7 @@ $resources['operations']['Teams'] = [
  * Action: Get Schedules for Season
  * Resource: Schedules
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/Schedules/{season}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/Schedules/{season}?key=<Your_developer_key>
  */
 $resources['operations']['Schedules'] = [
     'httpMethod' => 'GET',
@@ -74,7 +74,7 @@ $resources['operations']['Schedules'] = [
  * Action: Get Bye Week for Season
  * Resource: Byes
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/Byes/{season}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/Byes/{season}?key=<Your_developer_key>
  */
 $resources['operations']['Byes'] = [
     'httpMethod' => 'GET',
@@ -103,7 +103,7 @@ $resources['operations']['Byes'] = [
  * Action: Get Game Scores for Season
  * Resource: Scores
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/Scores/{season}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/Scores/{season}?key=<Your_developer_key>
  */
 $resources['operations']['Scores'] = [
     'httpMethod' => 'GET',
@@ -125,7 +125,7 @@ $resources['operations']['Scores'] = [
  * Action: Get Scores for Season and Week
  * Resource: ScoresByWeek
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/ScoresByWeek/{season}/{week}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/ScoresByWeek/{season}/{week}?key=<Your_developer_key>
  */
 $resources['operations']['ScoresByWeek'] = [
     'httpMethod' => 'GET',
@@ -152,7 +152,7 @@ $resources['operations']['ScoresByWeek'] = [
  * Action: Get Team Stats per Game for Season for Week
  * Resource: TeamGameStats
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/TeamGameStats/{season}/{week}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/TeamGameStats/{season}/{week}?key=<Your_developer_key>
  */
 $resources['operations']['TeamGameStats'] = [
     'httpMethod' => 'GET',
@@ -179,7 +179,7 @@ $resources['operations']['TeamGameStats'] = [
  * Action: Team Stats for Season
  * Resource: TeamSeasonStats
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/TeamSeasonStats{/Season}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/TeamSeasonStats{/Season}?key=<Your_developer_key>
  */
 $resources['operations']['TeamSeasonStats'] = [
     'httpMethod' => 'GET',
@@ -201,7 +201,7 @@ $resources['operations']['TeamSeasonStats'] = [
  * Action: Get Team Standings for Season
  * Resource: Standings
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/Standings{/Season}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/Standings{/Season}?key=<Your_developer_key>
  */
 $resources['operations']['Standings'] = [
     'httpMethod' => 'GET',
@@ -223,7 +223,7 @@ $resources['operations']['Standings'] = [
  * Action: Get Team Roster and Depth Charts
  * Resource: Players
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/Players/{team}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/Players/{team}?key=<Your_developer_key>
  */
 $resources['operations']['Players'] = [
     'httpMethod' => 'GET',
@@ -245,7 +245,7 @@ $resources['operations']['Players'] = [
  * Action: Get Player Stats and News
  * Resource: Player
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/Player{/PlayerID}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/Player{/PlayerID}?key=<Your_developer_key>
  */
 $resources['operations']['Player'] = [
     'httpMethod' => 'GET',
@@ -267,7 +267,7 @@ $resources['operations']['Player'] = [
  * Action: Get Free Agents
  * Resource: FreeAgents
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/FreeAgents?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/FreeAgents?key=<Your_developer_key>
  */
 $resources['operations']['FreeAgents'] = [
     'httpMethod' => 'GET',
@@ -281,10 +281,42 @@ $resources['operations']['FreeAgents'] = [
 ];
 
 /**
+ * Action: Get updated player stats for the past x amount of minutes.
+ * Resource: PlayerGameStatsByWeekDelta
+ *
+ * http://api.fantasydata.net/nfl/v2/{format}/PlayerGameStatsByWeekDelta/{season}/{week}/{minutes}?key=<Your_developer_key>
+ */
+$resources['operations']['PlayerGameStatsByWeekDelta'] = [
+    'httpMethod' => 'GET',
+    'uri' => 'PlayerGameStatsByWeekDelta{/Season}{/Week}{/Minutes}',
+    'responseModel' => 'JSON_Resource',
+    'parameters' => [
+        'Subscription' => [ 'type' => 'string', 'location' => 'uri' ],
+        'Format' => [ 'type' => 'string', 'location' => 'uri', 'default' => 'json' ],
+        'key' => [ 'type' => 'string', 'location' => 'query' ],
+        'Season' => [
+            'required' => true,
+            'type' => 'string',
+            'location' => 'uri'
+        ],
+        'Week' => [
+            'required' => true,
+            'type' => 'string',
+            'location' => 'uri'
+        ],
+        'Minutes' => [
+            'required' => true,
+            'type' => 'string',
+            'location' => 'uri'
+        ],
+    ]
+];
+
+/**
  * Action: Get Players Game Stats by Team for Season for Week
  * Resource: PlayerGameStatsByTeam
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/PlayerGameStatsByTeam/{season}/{week}/{team}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/PlayerGameStatsByTeam/{season}/{week}/{team}?key=<Your_developer_key>
  */
 $resources['operations']['PlayerGameStatsByTeam'] = [
     'httpMethod' => 'GET',
@@ -316,7 +348,7 @@ $resources['operations']['PlayerGameStatsByTeam'] = [
  * Action: Get Players Season Stats by Team for Season
  * Resource: PlayerSeasonStatsByTeam
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/PlayerSeasonStatsByTeam/{season}/{team}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/PlayerSeasonStatsByTeam/{season}/{team}?key=<Your_developer_key>
  */
 $resources['operations']['PlayerSeasonStatsByTeam'] = [
     'httpMethod' => 'GET',
@@ -343,7 +375,7 @@ $resources['operations']['PlayerSeasonStatsByTeam'] = [
  * Action: Get Players Game Stats by Player for Season for Week
  * Resource: PlayerGameStatsByPlayerID
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/PlayerGameStatsByPlayerID/{season}/{week}/{playerid}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/PlayerGameStatsByPlayerID/{season}/{week}/{playerid}?key=<Your_developer_key>
  */
 $resources['operations']['PlayerGameStatsByPlayerID'] = [
     'httpMethod' => 'GET',
@@ -375,7 +407,7 @@ $resources['operations']['PlayerGameStatsByPlayerID'] = [
  * Action: Get Players Season Stats by Player for Season
  * Resource: PlayerSeasonStatsByPlayerID
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/PlayerSeasonStatsByPlayerID/{season}/{playerid}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/PlayerSeasonStatsByPlayerID/{season}/{playerid}?key=<Your_developer_key>
  */
 $resources['operations']['PlayerSeasonStatsByPlayerID'] = [
     'httpMethod' => 'GET',
@@ -402,7 +434,7 @@ $resources['operations']['PlayerSeasonStatsByPlayerID'] = [
  * Action: Get Season League Leaders
  * Resource: SeasonLeagueLeaders
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/SeasonLeagueLeaders/{season}/{position}/{column}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/SeasonLeagueLeaders/{season}/{position}/{column}?key=<Your_developer_key>
  */
 $resources['operations']['SeasonLeagueLeaders'] = [
     'httpMethod' => 'GET',
@@ -434,7 +466,7 @@ $resources['operations']['SeasonLeagueLeaders'] = [
  * Action: Get Game League Leaders
  * Resource: GameLeagueLeaders
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/GameLeagueLeaders/{season}/{week}/{playerid}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/GameLeagueLeaders/{season}/{week}/{playerid}?key=<Your_developer_key>
  */
 $resources['operations']['GameLeagueLeaders'] = [
     'httpMethod' => 'GET',
@@ -471,7 +503,7 @@ $resources['operations']['GameLeagueLeaders'] = [
  * Action: Get Fantasy Defense By Game
  * Resource: FantasyDefenseByGame
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/FantasyDefenseByGame/{season}/{week}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/FantasyDefenseByGame/{season}/{week}?key=<Your_developer_key>
  */
 $resources['operations']['FantasyDefenseByGame'] = [
     'httpMethod' => 'GET',
@@ -498,7 +530,7 @@ $resources['operations']['FantasyDefenseByGame'] = [
  * Action: Get Fantasy Defense By Season
  * Resource: FantasyDefenseBySeason
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/FantasyDefenseBySeason/{season}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/FantasyDefenseBySeason/{season}?key=<Your_developer_key>
  */
 $resources['operations']['FantasyDefenseBySeason'] = [
     'httpMethod' => 'GET',
@@ -520,7 +552,7 @@ $resources['operations']['FantasyDefenseBySeason'] = [
  * Action: Get Injuries for Season for Week
  * Resource: Injuries
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/Injuries/{season}/{week}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/Injuries/{season}/{week}?key=<Your_developer_key>
  */
 $resources['operations']['Injuries'] = [
     'httpMethod' => 'GET',
@@ -553,7 +585,7 @@ $resources['operations']['Injuries'] = [
  * Action: Get News
  * Resource: News
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/News?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/News?key=<Your_developer_key>
  */
 $resources['operations']['News'] = [
     'httpMethod' => 'GET',
@@ -570,7 +602,7 @@ $resources['operations']['News'] = [
  * Action: Get News for Player
  * Resource: NewsByPlayerID
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/NewsByPlayerID/{playerid}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/NewsByPlayerID/{playerid}?key=<Your_developer_key>
  */
 $resources['operations']['NewsByPlayerID'] = [
     'httpMethod' => 'GET',
@@ -592,7 +624,7 @@ $resources['operations']['NewsByPlayerID'] = [
  * Action: Get News for Team
  * Resource: NewsByTeam
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/NewsByTeam/{team}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/NewsByTeam/{team}?key=<Your_developer_key>
  */
 $resources['operations']['NewsByTeam'] = [
     'httpMethod' => 'GET',
@@ -614,7 +646,7 @@ $resources['operations']['NewsByTeam'] = [
  * Action: Get Box Score
  * Resource: BoxScore
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/BoxScore/{season}/{week}/{team}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/BoxScore/{season}/{week}/{team}?key=<Your_developer_key>
  */
 $resources['operations']['BoxScore'] = [
     'httpMethod' => 'GET',
@@ -646,7 +678,7 @@ $resources['operations']['BoxScore'] = [
  * Action: Get Live Box Scores
  * Resource: LiveBoxScores
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/LiveBoxScores?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/LiveBoxScores?key=<Your_developer_key>
  */
 $resources['operations']['LiveBoxScores'] = [
     'httpMethod' => 'GET',
@@ -663,7 +695,7 @@ $resources['operations']['LiveBoxScores'] = [
  * Action: Get Players Game Stats for Season for Week
  * Resource: PlayerGameStatsByWeek
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/PlayerGameStatsByWeek/{season}/{week}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/PlayerGameStatsByWeek/{season}/{week}?key=<Your_developer_key>
  */
 $resources['operations']['PlayerGameStatsByWeek'] = [
     'httpMethod' => 'GET',
@@ -690,7 +722,7 @@ $resources['operations']['PlayerGameStatsByWeek'] = [
  * Action: Get Game Stats for Season
  * Resource: GameStats
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/GameStats/{season}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/GameStats/{season}?key=<Your_developer_key>
  */
 $resources['operations']['GameStats'] = [
     'httpMethod' => 'GET',
@@ -712,7 +744,7 @@ $resources['operations']['GameStats'] = [
  * Action: Get Game Stats for Season for Week
  * Resource: GameStatsByWeek
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/GameStatsByWeek/{season}/{week}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/GameStatsByWeek/{season}/{week}?key=<Your_developer_key>
  */
 $resources['operations']['GameStatsByWeek'] = [
     'httpMethod' => 'GET',
@@ -739,7 +771,7 @@ $resources['operations']['GameStatsByWeek'] = [
  * Action: Get Timeframes
  * Resource: Timeframes
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/Timeframes/{type}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/Timeframes/{type}?key=<Your_developer_key>
  */
 $resources['operations']['Timeframes'] = [
     'httpMethod' => 'GET',
@@ -761,7 +793,7 @@ $resources['operations']['Timeframes'] = [
  * Action: Get Final Box Scores
  * Resource: FinalBoxScores
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/FinalBoxScores?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/FinalBoxScores?key=<Your_developer_key>
  */
 $resources['operations']['FinalBoxScores'] = [
     'httpMethod' => 'GET',
@@ -778,7 +810,7 @@ $resources['operations']['FinalBoxScores'] = [
  * Action: Get Active Box Scores
  * Resource: ActiveBoxScores
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/ActiveBoxScores?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/ActiveBoxScores?key=<Your_developer_key>
  */
 $resources['operations']['ActiveBoxScores'] = [
     'httpMethod' => 'GET',
@@ -795,7 +827,7 @@ $resources['operations']['ActiveBoxScores'] = [
  * Action: Get Box Scores for Season for Week
  * Resource: BoxScores
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/BoxScores/{season}/{week}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/BoxScores/{season}/{week}?key=<Your_developer_key>
  */
 $resources['operations']['BoxScores'] = [
     'httpMethod' => 'GET',
@@ -822,7 +854,7 @@ $resources['operations']['BoxScores'] = [
  * Action: Get Stadiums
  * Resource: Stadiums
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/Stadiums?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/Stadiums?key=<Your_developer_key>
  */
 $resources['operations']['Stadiums'] = [
     'httpMethod' => 'GET',
@@ -839,7 +871,7 @@ $resources['operations']['Stadiums'] = [
  * Action: Get Projected Players Game Stats by Season, Week and Team
  * Resource: PlayerGameProjectionStatsByTeam
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/PlayerGameProjectionStatsByTeam/{season}/{week}/{team}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/PlayerGameProjectionStatsByTeam/{season}/{week}/{team}?key=<Your_developer_key>
  */
 $resources['operations']['PlayerGameProjectionStatsByTeam'] = [
     'httpMethod' => 'GET',
@@ -871,7 +903,7 @@ $resources['operations']['PlayerGameProjectionStatsByTeam'] = [
  * Action: Gets Fantasy Players with ADP
  * Resource: FantasyPlayers
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/FantasyPlayers?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/FantasyPlayers?key=<Your_developer_key>
  */
 $resources['operations']['FantasyPlayers'] = [
     'httpMethod' => 'GET',
@@ -888,7 +920,7 @@ $resources['operations']['FantasyPlayers'] = [
  * Action: Get Projected Fantasy Defense Stats By Season and Week
  * Resource: FantasyDefenseProjectionsByGame
  *
- * http://api.nfldata.apiphany.com/{subscription}/{format}/FantasyDefenseProjectionsByGame/{season}/{week}?key=<Your_developer_key>
+ * http://api.fantasydata.net/nfl/v2/{format}/FantasyDefenseProjectionsByGame/{season}/{week}?key=<Your_developer_key>
  */
 $resources['operations']['FantasyDefenseProjectionsByGame'] = [
     'httpMethod' => 'GET',

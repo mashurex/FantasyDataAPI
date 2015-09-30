@@ -54,6 +54,7 @@ use GuzzleHttp\Command;
  * @method Command\Model PlayerGameProjectionStatsByTeam() PlayerGameProjectionStatsByTeam( array $pOptions )
  * @method Command\Model FantasyPlayers() FantasyPlayers( array $pOptions )
  * @method Command\Model FantasyDefenseProjectionsByGame() FantasyDefenseProjectionsByGame( array $pOptions )
+ * @method Command\Model PlayerGameStatsByWeekDelta() PlayerGameStatsByWeekDelta( array $pOptions )
  */
 class Client extends GuzzleClient
 {
