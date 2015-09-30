@@ -25,7 +25,7 @@ To do so, add lines similar to the following to your project's composer.json fil
 ```json
 "require": {
     "php": ">=5.4",
-    "curvesoftware/gridiron-guru-fantasy-data-api" : "1.*",
+    "curvesoftware/gridiron-guru-fantasy-data-api" : "2.*",
 },
 
 "repositories": [ {
